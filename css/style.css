@@ -1,0 +1,9 @@
+body {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+.row, .col, .col-xxl-6 {
+    padding: 0;
+    margin: 0;
+}

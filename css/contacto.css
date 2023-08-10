@@ -1,0 +1,61 @@
+.contactoSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #565151;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contenedorFormulario {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.imagenFormulario {
+    width: 30%;
+    object-fit: cover;
+    
+}
+
+.formulario {
+    width: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #866b4f;
+    font-size: 1rem;
+}
+
+p {
+    margin: 1rem 0; 
+}
+
+.entrada {
+    width: 50%;
+}
+
+.entrada label {
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+
+}
+
+.entrada input, .entrada textarea {
+    background-color: #866b4f;
+}
+
+.botonFormulario {
+    text-transform: uppercase;
+    color: #866b4f;
+    border: 4px solid #866b4f;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+}

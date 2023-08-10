@@ -1,0 +1,44 @@
+.localesSection {
+    background-color: #565151;
+    color: white;
+    font-size: 1.5rem;
+ }
+
+ .navegacionSitio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+ }
+
+ .col {
+    width: 18%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ }
+
+.tituloCol {
+    text-transform: uppercase;
+    color: #bca177;
+    text-align: center ;
+}
+
+.listaCol { 
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.listaCol li {
+    text-transform: capitalize;
+}
+
+img {
+    color: white;
+}

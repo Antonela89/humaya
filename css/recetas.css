@@ -1,0 +1,49 @@
+.recetasSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #565151;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.recetas {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border: none;
+    width: 30%;
+}
+
+.card-img-top {
+    height: 25vh;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #bca177;
+    border: 0;
+    color: white;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.botonPreparacion {
+    color: #866b4f;
+    border: 2px solid #866b4f;
+    margin: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+}

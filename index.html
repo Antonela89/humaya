@@ -4,59 +4,228 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HUMAYA</title>
+    <!-- link css -->
     <!-- link de css de bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- este es el orden, primero bootstrap, luego las hojas de estilo propias para poder pisar los estilos de bootstrap con los propios -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="/css/productos.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/recetas.css">
+    <link rel="stylesheet" href="./css/locales.css">
+    <link rel="stylesheet" href="./css//footer.css">
+    <!-- link fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">HUMAYA</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+    <header> 
+        <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-xxl">
+              <div class="container-xxl d-flex justify-content-center align-items-center" id="navbarNav">
+                <div>
+                  <img class="img-fluid" src="./img/logo/LogoHumaya100x100.png" alt="LogoHumaya">
+                </div>
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="#">home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
-                  </li>
-                  <!-- <div class="container">
-                    <a class="navbar-brand" href="#">
-                      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-                    </a>
-                  </div> -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Locales</a>
+                    <a class="nav-link" href="#">productos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-disabled="#">Contacto</a>
+                    <a class="nav-link" href="#">locales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-disabled="#">contactos</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
+
+          <div class="bannerEncabezado">
+            <div class="encabezado">
+                <h1 class="tituloEncabezado">dulces del alma</h1>
+                <p class="textoEncabezado">Los productos HUMAYA son elaborados desde hace más de 50 años fiel a las tradiciones familiares y sabores caseros, acompañándote en los momentos más importantes de la vida.</p>
+                <buttton type="button" class="botonEncabezado btn btn-dark rounded-pill opacity-75">CONOCENOS</buttton>
+            </div>
+          </div>
     </header>
 
-    <div>
-        <div>
-            <h1>dulces humaya</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sint tempore minus repudiandae quibusdam, voluptate nobis ipsum magnam, consequatur, non reprehenderit. Expedita dolorem mollitia porro quia dicta at in, et similique nihil itaque, eveniet recusandae soluta veritatis! Nesciunt, quaerat natus?</p>
-            <buttton>conocenos más</buttton>
-        </div>
-    </div>
-
     <main>
+      <section class="productosSection">
+        <h2 class="tituloSection">productos</h2>
+        <div class="calidad">
+          <h3>La mejor calidad para vos</h3>
+          <div class="calidadAtributos">
+            <div>
+              <img class="iconoCalidad" src="./img/calidad/organico.png" alt="">
+              <h4>100% orgánico</h4>
+            </div>
+            <div>
+              <img class="iconoCalidad" src="./img/calidad/sin_tacc.png" alt="">
+              <h4>sin tacc</h4>
+            </div>
+            <div>
+              <img class="iconoCalidad" src="./img/calidad/depositphotos_107915642-stock-illustration-food-product-badge-no-additives.jpeg" alt="">
+              <h4>sin conservantes</h4>
+            </div>
+          </div>
+        </div>
 
+          <div class="listaProductos">
+            <div class="producto">
+              <img class="imagenProducto" src="./img/productos/Producto1.png" alt="">
+              <div class="descripcionProducto">
+                <h3 class="tituloProducto">dulce de leche tradicional</h3>
+                <p class="text-light">Elaboración artesanal del principio a fin, con un sabor intenso, receta tradicional.</p>
+                <p class="presentacion">Presentación en frasco de vidrio de 580gr.</p>
+                <button class="botonInfo" type="button">+ INFO</button>
+              </div>
+            </div>
+
+            <div class="producto">
+              <img class="imagenProducto" src="./img/productos/Producto2.png" alt="">
+              <div class=" descripcionProducto">
+                <h3 class="tituloProducto">dulce de leche sin azúcar</h3>
+                <p class="text-light">Elaboración artesanal para cuidar tu silueta sin renunciar a nada, endulzado naturalmente con stevia.</p>
+                <p class="presentacion">Presentación en frasco de vidrio de 580gr y 280gr.</p>
+                <button class="botonInfo" type="button">+ INFO</button>
+              </div>
+            </div>
+            
+            <div class="producto">
+              <img class="imagenProducto" src="./img/productos/Producto3.png" alt="">
+              <div class="descripcionProducto">
+                <h3 class="tituloProducto">dulce choconutt</h3>
+                <p class="text-light">Elaboración artesanal para el capricho dulce, combinación de dulce de leche, chocolate y pasta de avellanas. Una delicia única.</p>
+                <p class="presentacion">Presentación en frasco de vidrio de 280gr.</p>
+                <button class="botonInfo" type="button">+ INFO</button>
+              </div>
+            </div>
+
+            <div class="producto">
+              <img class="imagenProducto" src="./img/productos/alfajores_maicena.jpg" alt="">             
+              <div class="descripcionProducto">
+                <h3 class="tituloProducto">alfajores de maicena</h3>
+                <p class="text-light">Alfajores de dulce con coco rallado, relleno con 2 cm de pura dulzura. Pudiendo elegir entre dulce de leche tradicional, light o choconutt.</p>
+                <p class="presentacion">Presentación en caja de 6 y 12 alfajores.</p>
+                <button class="botonInfo" type="button">+ INFO</button>
+              </div>
+            </div>
+            </div>     
+      </section>
+
+      <section class="contactoSection">
+        <h2 class="tituloSection">contactanos</h2>
+        <div class="contenedorFormulario">
+          <img class="imagenFormulario" src="./img/contacto/contacto2.webp" alt="">
+          <div class="formulario">
+            <p>Déjanos tu consulta y nuestro personal se pondrá
+              en contacto a la brevedad:</p>
+            <div class="entrada">
+              <label for="exampleFormControlInput1" class="form-label">nombre:</label>
+              <input type="text" class="form-control" id="exampleFormControlInput" >
+            </div>
+            <div class="entrada">
+              <label for="exampleFormControlInput1" class="form-label">e-mail:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="entrada">
+              <label for="exampleFormControlTextarea1" class="form-label">consulta:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button class="btn botonFormulario" type="submit">enviar</button>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="recetasSection">
+        <h2 class="tituloSection">recetas</h2>
+        <div class="recetas">
+          <div class="card" style="width: 18rem;">
+            <img src="./img/recetas/conitos.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">conitos</h5>
+              <p class="card-text">unas deliciosa opcion para acompañar las meriendas, ese antojo de media nocje o compartir con amigos.</p>
+              <a href="#" class="btn botonPreparacion">Preparación</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./img/recetas/pepas.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">pepas</h5>
+              <p class="card-text">Las galletitas mas tiernas y ricas, rellenas de dulce de leche, ideales para el mate y la hora del té.</p>
+              <a href="#" class="btn botonPreparacion">Preparación</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="./img/recetas/torta_nutt.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">torta nutt</h5>
+              <p class="card-text">La torta de tres capas más sabrosa del mundo, combina una base de vainilla, dulce de leche y cubierta de choconutt.</p>
+              <a href="#" class="btn botonPreparacion">Preparación</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="localesSection">
+        <h2 class="tituloSection">encontranos en</h2>
+        <div class="navegacionSitio">
+          <div class="col">
+            <img src="./img/logo/LogoHumaya100x100.png" alt="">
+          </div>
+          <div class="col">
+            <h4 class="tituloCol">menú</h4>
+            <ul class="listaCol">
+              <li>home</li>
+              <li>productos</li>
+              <li>locales</li>
+              <li>contactos</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4 class="tituloCol">navegación</h4>
+          <ul class="listaCol">
+            <li>Preguntas frecuentes</li>
+            <li>distribuidores</li>
+            <li>prensa</li>
+            <li>recetas exclusivas</li>
+          </ul>
+          </div>
+          <div class="col">
+            <h4 class="tituloCol">redes</h4>
+            <ul class="listaCol">
+              <li><a class="navbar-brand" href="#">
+                <img src="./img/redes/instagram.png" alt="instagram" width="30" height="24">
+              </a></li>
+              <li><a class="navbar-brand" href="#">
+                <img src="./img/redes/facebook.png" alt="facebook" width="30" height="24">
+              </a></li>
+              <li><a class="navbar-brand" href="#">
+                <img src="./img/redes/tik-tok.png" alt="tiktok" width="30" height="24">
+              </a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4 class="tituloCol">ubicación</h4>
+            <p>Monte de Oca 2356, CABA</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3378.390724429914!2d-58.37542971642671!3d-34.649295195683656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1691634227327!5m2!1ses!2sar" width="150" height="112" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        </section>
     </main>
-
-    <footer>
-
-    </footer>
+        
+<footer>
+  <p>Maquetado web - Profesora Flores Gisela</p>
+</footer>
     
 
     <!-- script de js de bootstrap -->
