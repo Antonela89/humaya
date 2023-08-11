@@ -1,7 +1,9 @@
 .localesSection {
     background-color: #565151;
+    height: 35vh;
     color: white;
     font-size: 1.5rem;
+    padding: 0 1rem;
  }
 
  .navegacionSitio {
@@ -17,7 +19,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+ }
+ 
+ .logoLocal {
+    width: 35%;
+    object-fit: cover;
  }
 
 .tituloCol {
@@ -39,6 +45,16 @@
     text-transform: capitalize;
 }
 
-img {
-    color: white;
+.iconoRed { 
+    filter: invert(1); 
+    width: 8%;
+    /* ajustar segun responsive */
+    object-fit: cover;
+    margin: 0.1rem;
+}
+
+.listaCol-redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
