@@ -1,4 +1,5 @@
 .localesSection {
+    width: 100%;
     background-color: #565151;
     height: 35vh;
     color: white;
@@ -7,6 +8,8 @@
  }
 
  .navegacionSitio {
+    width: 100%;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,15 +17,20 @@
  }
 
  .col {
-    width: 18%;
-    height: 20vh;
+    width: 20%;
+    height: 30vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    justify-content: center; 
+ }
+ 
+ .col_img {
+    justify-content: center;
  }
  
  .logoLocal {
-    width: 35%;
+    width: 50%;
     object-fit: cover;
  }
 
@@ -45,16 +53,15 @@
     text-transform: capitalize;
 }
 
-.iconoRed { 
-    filter: invert(1); 
-    width: 8%;
-    /* ajustar segun responsive */
-    object-fit: cover;
-    margin: 0.1rem;
-}
-
-.listaCol-redes {
+.listaCol-redes  a{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.25rem;
+}
+
+.iconoRed { 
+    filter: invert(1); 
+    width: 10%;
+    object-fit: cover;  
 }
