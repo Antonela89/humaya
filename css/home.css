@@ -33,6 +33,10 @@
     padding: 2rem 0;
 }
 
+.enfasis {
+    text-transform: uppercase;
+}
+
 .botonEncabezado {
     width: 50%;
     font-size: 1.5rem;

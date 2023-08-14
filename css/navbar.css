@@ -1,5 +1,17 @@
 .container-xxl {
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-titulo{
+    color: #bca177;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 0;
+    display: none;
+
 }
 
 .nav-link {

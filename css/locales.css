@@ -1,7 +1,6 @@
 .localesSection {
     width: 100%;
     background-color: #565151;
-    height: 35vh;
     color: white;
     font-size: 1.5rem;
     padding: 0 1rem;
@@ -13,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 1.2rem;
  }
 
  .col {
@@ -21,23 +20,23 @@
     height: 30vh;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
  }
  
  .col_img {
     justify-content: center;
+    align-items: center;
  }
  
  .logoLocal {
-    width: 50%;
+    width: 30%;
     object-fit: cover;
  }
 
 .tituloCol {
     text-transform: uppercase;
     color: #bca177;
-    text-align: center ;
+    text-align:start;
+    height: 5vh;
 }
 
 .listaCol { 
@@ -49,14 +48,18 @@
     padding: 0;
 }
 
-.listaCol li {
+.listaCol-Item {
     text-transform: capitalize;
 }
 
-.listaCol-redes  a{
+.listaCol-Link {
+    text-decoration: none;
+    color: white;
+}
+
+.listaCol-redes .listaCol-Item .listaCol-Link{
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 0.25rem;
 }
 
@@ -65,3 +68,5 @@
     width: 10%;
     object-fit: cover;  
 }
+
+

@@ -25,10 +25,11 @@
     <header> 
         <nav class="navbar navbar-expand navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-xxl">
-              <div class="container-xxl d-flex justify-content-center align-items-center" id="navbarNav">
+              <div class="container-xxl" id="navbarNav">
                 <div>
                   <img class="img-fluid" src="./img/logo/LogoHumaya100x100.png" alt="LogoHumaya">
                 </div>
+                <h1 class="navbar-titulo">humaya</h1>
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="#">home</a>
@@ -50,7 +51,7 @@
           <div class="bannerEncabezado">
             <div class="encabezado">
                 <h1 class="tituloEncabezado">dulces del alma</h1>
-                <p class="textoEncabezado">Los productos HUMAYA son elaborados desde hace más de 50 años fiel a las tradiciones familiares y sabores caseros, acompañándote en los momentos más importantes de la vida.</p>
+                <p class="textoEncabezado">Los productos <span class="enfasis">humaya</span> son elaborados desde hace más de 50 años fiel a las tradiciones familiares y sabores caseros, acompañándote en los momentos más importantes de la vida.</p>
                 <buttton type="button" class="botonEncabezado btn btn-dark rounded-pill opacity-75">CONOCENOS</buttton>
             </div>
           </div>
@@ -153,7 +154,7 @@
             <img src="./img/recetas/conitos.webp" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">conitos</h5>
-              <p class="card-text">unas deliciosa opcion para acompañar las meriendas, ese antojo de media nocje o compartir con amigos.</p>
+              <p class="card-text">unas deliciosa opcion para acompañar las meriendas, ese antojo de media noche o compartir con amigos.</p>
               <a href="#" class="btn botonPreparacion">Preparación</a>
             </div>
           </div>
@@ -185,31 +186,31 @@
           <div class="col">
             <h4 class="tituloCol">menú</h4>
             <ul class="listaCol">
-              <li>home</li>
-              <li>productos</li>
-              <li>locales</li>
-              <li>contacto</li>
+              <li class="listaCol-Item"><a class="listaCol-Link" href="">home</a></li>
+              <li class="listaCol-Item"><a class="listaCol-Link" href="">productos</a></li>
+              <li class="listaCol-Item"><a class="listaCol-Link" href="">locales</a></li>
+              <li class="listaCol-Item"><a class="listaCol-Link" href="">contacto</a></li>
             </ul>
           </div>
           <div class="col">
             <h4 class="tituloCol">navegación</h4>
           <ul class="listaCol">
-            <li>Preguntas frecuentes</li>
-            <li>distribuidores</li>
-            <li>prensa</li>
-            <li>recetas exclusivas</li>
+            <li class="listaCol-Item"><a class="listaCol-Link" href="#">Preguntas frecuentes</a></li>
+            <li class="listaCol-Item"><a class="listaCol-Link" href="#">distribuidores</a></li>
+            <li class="listaCol-Item"><a class="listaCol-Link" href="#">prensa</a></li>
+            <li class="listaCol-Item"><a class="listaCol-Link" href="#">recetas exclusivas</a></li>
           </ul>
           </div>
           <div class="col">
             <h4 class="tituloCol">redes</h4>
             <ul class="listaCol listaCol-redes">
-              <li><a class="navbar-brand" href="#">
+              <li class="listaCol-Item"><a class="navbar-brand listaCol-Link" href="#">
                 <img class="iconoRed" src="./img/redes/instagram.png" alt="instagram">
               </a></li>
-              <li><a class="navbar-brand" href="#">
+              <li class="listaCol-Item"><a class="navbar-brand listaCol-Link" href="#">
                 <img class="iconoRed" src="./img/redes/facebook.png" alt="facebook">
               </a></li>
-              <li><a class="navbar-brand" href="#">
+              <li class="listaCol-Item"><a class="navbar-brand listaCol-Link" href="#">
                 <img class="iconoRed" src="./img/redes/tik-tok.png" alt="tiktok">
               </a></li>
             </ul>
@@ -227,7 +228,6 @@
   <p>Maquetado web - Profesora Flores Gisela</p>
 </footer>
     
-
     <!-- script de js de bootstrap -->
     <!-- Los scripts modifican elementos de la página web, y si el script estuviera arriba intentaría modificar elementos HTML de la página que todavía no se crearon/cargaron -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
