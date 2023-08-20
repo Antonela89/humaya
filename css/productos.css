@@ -101,9 +101,9 @@
     background-color: transparent;
 }
 
-.botonInfo:hover {
-    color:#565151;
-    border: 2px solid #565151;
+.botonInfo:hover, .botonInfo-alfajor:hover  {
+    color: white;
+    border: 2px solid white;
     font-weight: 700;
 }
 
@@ -117,10 +117,4 @@
 
 .botonInfo-alfajor { 
     border: 2px solid #565151;
-}
-
-.botonInfo-alfajor:hover {
-    color:white;
-    border: 2px solid white;
-    font-weight: 700;
 }
