@@ -2,7 +2,7 @@
     background-color: #565151;
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .tituloSection {
@@ -71,12 +71,12 @@
 }
 
 .imagenProducto {
-    width: 50%;
+    min-width: 50%;
     object-fit: cover;
 }
 
 .descripcionProducto {
-    width: 50%;
+    min-width: 50%;
     padding: 1rem;
     background-color: black;
     display: flex;
@@ -122,3 +122,18 @@
 .botonInfo-alfajor { 
     border: 2px solid #565151;
 }
+
+/* diseño responsivo */
+/* @media screen and (max-width: 768px) {
+    .producto {
+        flex-direction: column;
+    }
+
+    .imagenProducto, .descripcionProducto {
+        width: 100%;
+    }
+l
+    .producto:nth-of-type(odd) {
+        flex-direction: column;
+    }
+} */

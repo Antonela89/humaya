@@ -38,7 +38,11 @@
 }
 
 .botonEncabezado {
-    width: 50%;
+    min-width: 50%;
     font-size: 1.5rem;
     padding: 1rem;
+}
+
+/* diseño  responsivo */
+@media screen and (max-width: 768px) {
 }
