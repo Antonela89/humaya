@@ -56,3 +56,14 @@
 .botonPreparacion:hover{
     border: 2px solid white;
 }
+
+@media screen and (max-width: 375px) {
+    .recetas {
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        min-width: 80%;
+        margin: 1rem 0;
+    }
+}

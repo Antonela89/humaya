@@ -51,7 +51,7 @@
 .textoCalidad {
     width: 100%;
     font-size: 1rem;
-    padding: 0.5rem
+    padding: 0.5rem;
 }
 
 .listaProducto {
@@ -124,16 +124,20 @@
 }
 
 /* diseño responsivo */
-/* @media screen and (max-width: 768px) {
-    .producto {
+@media screen and (max-width: 375px) {
+    .calidadAtributos {
+        width: 95%;
+    }
+
+    .textoCalidad {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .producto, .producto:nth-of-type(odd) {
         flex-direction: column;
     }
 
     .imagenProducto, .descripcionProducto {
         width: 100%;
     }
-l
-    .producto:nth-of-type(odd) {
-        flex-direction: column;
-    }
-} */
+}

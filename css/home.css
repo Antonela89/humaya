@@ -44,5 +44,8 @@
 }
 
 /* diseño  responsivo */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
+    .encabezado {
+        width: 100%;
+    }
 }

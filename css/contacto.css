@@ -61,3 +61,18 @@
     color:#bca177;
     border: 4px solid #bca177;
 }
+
+/* diseño responsivo */
+@media screen and (max-width: 375px) {
+    .contenedorFormulario {
+        flex-direction: column;
+    }
+
+    .imagenFormulario, .formulario {
+        width: 100%;
+    }
+
+    .entrada {
+        width: 90%;
+    }
+}
