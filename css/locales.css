@@ -68,7 +68,7 @@
     margin: 0.25rem;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
     .localesSection{
         display: none;
     }
