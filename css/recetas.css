@@ -57,7 +57,7 @@
     border: 2px solid white;
 }
 
-@media screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
     .recetas {
         flex-wrap: wrap;
     }

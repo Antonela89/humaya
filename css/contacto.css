@@ -63,7 +63,7 @@
 }
 
 /* diseño responsivo */
-@media screen and (max-width: 425px) {
+@media  only screen and (max-width: 425px) {
     .contenedorFormulario {
         flex-direction: column;
     }
