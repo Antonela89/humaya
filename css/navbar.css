@@ -20,7 +20,7 @@
 }
 
 /* diseño  responsivo */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 425px) {
     .iconos-nav{
         width: 100%;
         display: flex;
@@ -29,6 +29,6 @@
 
     .nav-link {
         font-size: 1rem;
-        text-transform: uppercase ;
+        text-transform: uppercase;
     }
 }
