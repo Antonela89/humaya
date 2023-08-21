@@ -8,7 +8,7 @@
 
  .navegacionSitio {
     width: 100%;
-    min-height: 20vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,9 +16,9 @@
  }
 
  .col {
-    min-width: 15%;
-    max-width: 20%;
-    min-height: 20vh;
+    width: 15%;
+    width: 20%;
+    height: 20vh;
     display: flex;
     flex-direction: column;
  }
@@ -56,21 +56,47 @@
     color: white;
 }
 
-.listaCol .listaCol-Item .listaCol-Link .iconoRed {
+.col-redes .redes-Link .iconoRed{
     display: flex;
     align-items: flex-start;
-}
-
-.iconoRed { 
     filter: invert(1); 
-    max-width: 10%;
+    width: 10%;
     object-fit: cover;
     margin: 0.25rem;
-}
+} 
 
 @media only screen and (max-width: 768px) {
-    .localesSection{
+    .imgCol, .col-menu, .col-sitio, .tituloCol, .col-ubicacion{
         display: none;
+        width: 0;
+    }
+
+    .navegacionSitio {
+        flex-direction: column;
+        height: 10vh;
+    }
+
+    .col-redes{ 
+        width: 100%;
+    }
+
+    .col-redes{
+        display: flex;
+        flex-direction: row;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .col-redes .redes-Link{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-redes .redes-Link .iconoRed {
+        width: 40%;
     }
 }
 
