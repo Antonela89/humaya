@@ -154,32 +154,20 @@
 
       <section class="recetasSection">
         <h2 class="tituloSection">recetas</h2>
-        <div class="recetas">
-          <div class="card" style="width: 18rem;">
-            <img src="./img/recetas/conitos.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">conitos</h5>
-              <p class="card-text">unas deliciosa opcion para acompañar las meriendas, ese antojo de media noche o compartir con amigos.</p>
-              <a href="#" class="btn botonPreparacion">Preparación</a>
+          <div id="carouselExample" class="marcoExterno carousel slide">
+            <div class="receta carousel-inner" id="recetas">
+                <div class="carousel-item card">
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="card" style="width: 18rem;">
-            <img src="./img/recetas/pepas.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">pepas</h5>
-              <p class="card-text">Las galletitas mas tiernas y ricas, rellenas de dulce de leche, ideales para el mate y la hora del té.</p>
-              <a href="#" class="btn botonPreparacion">Preparación</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="./img/recetas/torta_nutt.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">torta nutt</h5>
-              <p class="card-text">La torta de tres capas más sabrosa del mundo, combina una base de vainilla, dulce de leche y cubierta de choconutt.</p>
-              <a href="#" class="btn botonPreparacion">Preparación</a>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
         
@@ -241,5 +229,6 @@
     <!-- script de js de bootstrap -->
     <!-- Los scripts modifican elementos de la página web, y si el script estuviera arriba intentaría modificar elementos HTML de la página que todavía no se crearon/cargaron -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
