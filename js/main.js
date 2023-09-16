@@ -1,21 +1,21 @@
-//vista en front end: 
-// carrosuel (boostrast) contiene cards (boostrast) 
-// ver botones antes y despues de carrousel
-// cada card corresponde a una receta 
-// card necesesito: img / titulo / descripcion / preparacion
-// la receta la obtengo de la api
+const slide = document.querySelector('.slide');
+const puntos = document.querySelectorAll('.punto');
 
-const btnAnterior = document.querySelector(".carousel-control-prev");
-const btnSiguiente = document.querySelector(".carousel-control-next");
+puntos.forEach((punto, i) => {
+    puntos[i].addEventListener('click', () => {
 
-btnAnterior.addEventListener("click", ()=> {
-    console.log("click");
+        let posicion = i;
+        let operacion = posicion * -30;
+
+        slide.style.transform=`translateX(${operacion}%)`
+
+        puntos.forEach((punto, i) => {
+            puntos[i].classList.remove('activo');
+        })
+        puntos[i].classList.add('activo');
+    })
+    
 });
-
-btnSiguiente.addEventListener("click", ()=> {
-    console.log("click");
-})
-
 
 const obtenerRecetas = async () => {
     try {
@@ -31,16 +31,20 @@ const obtenerRecetas = async () => {
             datos.hits.forEach(receta => {
                 // console.log(receta);
                 recetas += `
-                <div class="card">
-                    <img src="${receta.recipe.image}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">${receta.recipe.label}</h5>
-                        <a href="${receta.recipe.url}" class="btn botonPreparacion">Preparación</a>
+                <div class="item">
+                    <div class="card">
+                        <img src="${receta.recipe.image}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${receta.recipe.label}</h5>
+                            <a href="${receta.recipe.url}" class="btn botonPreparacion">Preparación</a>
+                        </div>
                     </div>
-                </div>`
+                </div>`     
             })
-            document.getElementById("recetas").innerHTML = recetas;
 
+            const recetasElement = document.getElementById("recetas");
+            recetasElement.innerHTML = recetas;
+            
         } else {
             console.error('Error en la respuesta de la API:', respuesta.status);
         }
@@ -50,7 +54,11 @@ const obtenerRecetas = async () => {
     }
 }
 
-obtenerRecetas();
+// la función obtenerRecetas() se ejecute una vez que el documento HTML esté listo.
+document.addEventListener("DOMContentLoaded", () => {
+    obtenerRecetas();
+});
+
 
 /* <div class="card" style="width: 18rem;">
                     <img src="${receta.recipe.image}" class="card-img-top" alt="...">

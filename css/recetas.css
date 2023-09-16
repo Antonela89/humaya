@@ -1,6 +1,7 @@
 .recetasSection {
     width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     background-color: #565151;
     text-align: center;
@@ -9,18 +10,32 @@
     height: 70vh;
 }
 
-.receta {
+.carousel {
     width: 100%;
+}
+
+.slide {
+    width: 300%;
     display: flex;
-    height: 70vh;
-    /* align-items: center;
-    justify-content: center; */
+    flex-flow: row nowrap;
+    height: 50vh;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.item {
+    width: 90%;
+    height: 100%;
+    transition: all .5s ease;
+    transform: translateX(0%);
 }
 
 .card {
     border: none;
-    width: 30%;
-    height: 65vh;
+    width: calc( 90 / 3 );
+    height: 100%;
     margin: 0.5em;
 } 
 
@@ -37,7 +52,7 @@
 
 .card-title {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     height: 4vh;
 }
 
@@ -51,7 +66,7 @@
     border: 2px solid #866b4f;
     margin: 0.5rem;
     padding: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
     background-color: transparent;
     height: 5vh;
@@ -59,6 +74,25 @@
 
 .botonPreparacion:hover{
     border: 2px solid white;
+}
+
+.puntos {
+    width: 100%;
+    padding: 0.4rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.punto {
+    width: 2rem;
+    height: 2rem;
+    margin: 1em 1em 0;    
+}
+
+.punto.activo {
+    color: #bca177;
 }
 
 @media only screen and (max-width: 768px) {
