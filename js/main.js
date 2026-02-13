@@ -1,69 +1,63 @@
+import {APY_KEY}  from "../apiKey.js";
+
 const slide = document.querySelector('.slide');
 const puntos = document.querySelectorAll('.punto');
 
 puntos.forEach((punto, i) => {
-    puntos[i].addEventListener('click', () => {
+    punto.addEventListener('click', () => {
+        let operacion = i * -90;
+        slide.style.transform = `translateX(${operacion}%)`;
 
-        let posicion = i;
-        let operacion = posicion * -30;
-
-        slide.style.transform=`translateX(${operacion}%)`
-
-        puntos.forEach((punto, i) => {
-            puntos[i].classList.remove('activo');
-        })
-        puntos[i].classList.add('activo');
-    })
-    
+        document.querySelector('.punto.activo')?.classList.remove('activo');
+        punto.classList.add('activo');
+    });
 });
 
 const obtenerRecetas = async () => {
+    const busqueda = 'dulce de leche';
+
+    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${APY_KEY}&query=${busqueda}&language=es&addRecipeInformation=true&number=9`;
+
     try {
-        const respuesta = await fetch('https://api.edamam.com/search?q=caramel&app_id=a28bb00e&app_key=8e72c1f02f82a9df52bc0aaab2a8e47f')
-        // console.log(respuesta);
+        const respuesta = await fetch(url);
 
-        if(respuesta.status === 200) {
+        if (respuesta.ok) {
             const datos = await respuesta.json();
-            // console.log(datos);
-
             let recetas = "";
 
-            datos.hits.forEach(receta => {
-                // console.log(receta);
+            console.log(datos.results);
+            
+            datos.results.forEach(receta => {
                 recetas += `
                 <div class="item">
                     <div class="card">
-                        <img src="${receta.recipe.image}" class="card-img-top" alt="...">
+                        <img src="${receta.image}" class="card-img-top" alt="${receta.title}">
                         <div class="card-body">
-                            <h5 class="card-title">${receta.recipe.label}</h5>
-                            <a href="${receta.recipe.url}" class="btn botonPreparacion">Preparación</a>
+                            <h5 class="card-title">${receta.title}</h5>
+                            <a href="${receta.sourceUrl}" target="_blank" class="btn botonPreparacion">Preparación</a>
                         </div>
                     </div>
-                </div>`     
-            })
+                </div>`;
+            });
 
             const recetasElement = document.getElementById("recetas");
-            recetasElement.innerHTML = recetas;
+            if (recetasElement) {
+                recetasElement.innerHTML = recetas;
+            }
             
         } else {
-            console.error('Error en la respuesta de la API:', respuesta.status);
+            if(respuesta.status === 402) {
+                console.error('Límite de la API alcanzado (Spoonacular Free tiene límite diario)');
+            } else {
+                console.error('Error en la respuesta:', respuesta.status);
+            }
         }
 
     } catch (error) {
-        console.log('Error de la solicitud:', error);
+        console.log('Error de red o CORS:', error);
     }
 }
 
-// la función obtenerRecetas() se ejecute una vez que el documento HTML esté listo.
 document.addEventListener("DOMContentLoaded", () => {
-    obtenerRecetas();
+obtenerRecetas();
 });
-
-
-/* <div class="card" style="width: 18rem;">
-                    <img src="${receta.recipe.image}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">${receta.recipe.label}</h5>
-                    <p class="card-text">unas deliciosa opcion para acompañar las meriendas, ese antojo de media noche o compartir con amigos.</p>
-                    <a href="${receta.recipe.url}" class="btn botonPreparacion">Preparación</a>
-                </div>` */

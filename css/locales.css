@@ -2,102 +2,120 @@
     width: 100%;
     background-color: #565151;
     color: white;
-    font-size: 1.5rem;
-    padding: 0 1rem;
- }
+    padding: 3rem 2rem;
+}
 
- .navegacionSitio {
-    width: 100%;
-    height: 20vh;
+.tituloSectionPrincipal {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+}
+
+.contenedorColumnas {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 0.9rem;
- }
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
 
- .col {
-    width: 15%;
-    width: 20%;
-    height: 20vh;
+.columna {
+    flex: 1;
+    min-width: 180px;
+    /* Evita que se amontonen */
     display: flex;
     flex-direction: column;
- }
- 
- .imgCol {
-    background-image: url("../img/logo/LogoHumaya100x100.png");
-    background-repeat: no-repeat;
-    background-position:top
- }
- 
+}
+
+/* Títulos de cada columna */
 .tituloCol {
     text-transform: uppercase;
     color: #bca177;
-    text-align:start;
-    height: 5vh;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
 }
 
-.listaCol { 
+/* Listas */
+.listaCol {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-.listaCol-Item {
+.listaCol li {
+    margin-bottom: 0.8rem;
     text-transform: capitalize;
 }
 
-.listaCol-Link {
+.listaCol a {
     text-decoration: none;
-    color: white;
+    color: #ddd;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-.col-redes .redes-Link .iconoRed{
+.listaCol a:hover {
+    color: #bca177;
+}
+
+/* Redes Sociales */
+.redesContainer {
     display: flex;
-    align-items: flex-start;
-    filter: invert(1); 
-    width: 10%;
-    object-fit: cover;
-    margin: 0.25rem;
-} 
-
-@media only screen and (max-width: 768px) {
-    .imgCol, .col-menu, .col-sitio, .tituloCol, .col-ubicacion{
-        display: none;
-        width: 0;
-    }
-
-    .navegacionSitio {
-        flex-direction: column;
-        height: 10vh;
-    }
-
-    .col-redes{ 
-        width: 100%;
-    }
-
-    .col-redes{
-        display: flex;
-        flex-direction: row;
-        height: 10vh;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .col-redes .redes-Link{
-        width: 30%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .col-redes .redes-Link .iconoRed {
-        width: 40%;
-    }
+    gap: 15px;
 }
 
+.redesContainer img {
+    width: 30px;
+    /* Tamaño mucho más visible */
+    filter: invert(1);
+    transition: transform 0.3s;
+}
 
+.redesContainer img:hover {
+    transform: scale(1.2);
+}
+
+/* Ubicación y Mapa */
+.direccionTexto {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.mapaContainer iframe {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* Logo */
+.logoFooter img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .contenedorColumnas {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .columna {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .redesContainer {
+        justify-content: center;
+    }
+
+    .mapaContainer iframe {
+        height: 200px;
+    }
+}

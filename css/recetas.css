@@ -1,103 +1,154 @@
+/* Contenedor Principal */
 .recetasSection {
     width: 100%;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     background-color: #565151;
-    text-align: center;
+    padding: 4rem 0;
+    min-height: 100vh;
     color: white;
-    font-size: 1.5rem;
-    height: 130vh;
+}
+
+.recetasSection h2 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .carousel {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
-.slide {
-    width: 300%;
-    display: flex;
-    flex-flow: row nowrap;
-    height: 90%;
-    padding: 2rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.item {
     width: 90%;
-    height: 100%;
-    transition: all .5s ease;
-    transform: translateX(0%);
+    max-width: 1100px;
+    overflow: hidden;
+    margin-bottom: 2rem;
 }
 
-.card {
-    border: none;
-    width: calc( 90 / 3 );
-    height: 100%;
-    margin: 1rem;
-} 
+/* El riel que se mueve */
+.slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 30px;
+    /* Espacio entre tarjetas */
+    padding-left: 20px;
+}
 
+/* Cada envoltorio de tarjeta */
+.item {
+    flex: 0 0 300px;
+    /* No crece, no encoge, siempre mide 300px */
+    display: flex;
+}
+
+/* La Tarjeta */
+.card {
+    background-color: #bca177;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagen de la receta */
 .card-img-top {
-    height: 50vh;
+    width: 100%;
+    height: 220px;
+    /* Altura fija para todas las fotos */
     object-fit: cover;
 }
 
+/* Cuerpo de la tarjeta */
 .card-body {
-    background-color: #bca177;
-    color: white;
-    height: 20vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    /* Empuja el botón siempre abajo */
+    text-align: center;
 }
 
 .card-title {
-    text-transform: uppercase;
+    color: white;
     font-size: 1.2rem;
-    height: 10vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+
+    /* Truco para forzar 2 líneas y poner "..." si es más largo */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    /* Altura fija basada en line-height (1.4 * 1.2rem * 2 líneas) */
+    line-height: 1.4rem;
+    height: 2.8rem;
 }
 
+/* Botón */
 .botonPreparacion {
-    color: #866b4f;
-    border: 2px solid #866b4f;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    text-align: center;
-    background-color: transparent;
-}
-
-.botonPreparacion:hover{
+    color: white;
     border: 2px solid white;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    background-color: rgba(134, 107, 79, 0.5);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    align-self: center;
 }
 
+.botonPreparacion:hover {
+    background-color: white;
+    color: #866b4f;
+    font-weight: bold;
+}
+
+/* Paginación */
 .puntos {
-    width: 100%;
-    height: 10%;
-    padding: 0.4rem;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    gap: 15px;
 }
 
 .punto {
-    width: 2rem;
-    height: 2rem;
-    margin: 1em 1em 0;    
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .punto.activo {
-    color: #bca177;
+    background-color: #bca177;
+    transform: scale(1.3);
 }
 
-@media only screen and (max-width: 768px) {
-    .carousel {
-        overflow-x: hidden;
+/* --- RESPONSIVE --- */
+
+@media (max-width: 992px) {
+    .item {
+        min-width: calc(50% - 20px);
+        /* 2 tarjetas en tablets */
     }
-    
-    .card {
-        min-width: 80%;
-        margin: 1rem 0;
+}
+
+@media (max-width: 600px) {
+    .item {
+        min-width: 100%;
+        /* 1 tarjeta en celulares */
+    }
+
+    .carousel {
+        width: 85%;
     }
 }
